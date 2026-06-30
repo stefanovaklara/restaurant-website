@@ -1,37 +1,56 @@
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
 }
 
 .hero {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .navbar {
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.95) !important;
+    background-color: rgba(0, 0, 0, 0.98) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12) !important;
 }
 
 .btn-restaurant {
     background-color: #8B4513;
     border-color: #8B4513;
-    color: white;
 }
 
 .btn-restaurant:hover {
     background-color: #A0522D;
     border-color: #A0522D;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #8B4513;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
 }
